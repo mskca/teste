@@ -1,18 +1,11 @@
-<body>
+<svg width="500" height="500"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <circle cx="50" cy="50" r="45" fill="green"
+          id="foo"/>
+
+  <script type="application/javascript">
+    alert("SVG Image Executing JavaScript!");
+  </script>
+
   <object id="svgholder" data="some.svg" type="image/svg+xml"></object>
-</body>
-
-<script type="text/javascript">
-  var svgholder = $('body').find("object#svgholder");
-
-  svgholder.load("image/svg+xml", function() {
-    alert("SVG image loaded!");
-
-    // Access the SVG DOM using the 'contentDocument' property
-    var svgDoc = svgholder[0].contentDocument;
-
-    // Execute the JavaScript code within the SVG image
-    svgDoc.querySelector("script").textContent = "alert('SVG Image Executing JavaScript!');";
-    svgDoc.querySelector("script").textContent = "eval(atob('JywKCQkJCgkJCQwLK2kgPT09'));";
-  });
-</script>
+</svg>
