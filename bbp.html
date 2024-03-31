@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cora Access</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+  .container {
+    position: relative;
+    width: 350px; /* adjust as needed */
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+
+  .circle {
+    position: absolute;
+    top: -50px; /* half of the height to make it center */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px; /* adjust as needed */
+    height: 100px; /* adjust as needed */
+    background-color: #ff4b6e;
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+  .qr-code {
+    margin: 20px 0;
+  }
+
+  .qr-code img {
+    width: 150px; /* adjust as needed */
+    height: 150px; /* adjust as needed */
+  }
+
+  .qr-code p {
+    font-size: 0.8em;
+    color: #333;
+    margin-top: 5px;
+  }
+
+  .instructions h2 {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .instructions ol {
+    text-align: left;
+    padding-left: 0;
+  }
+
+  .instructions ol li {
+    background: #eee;
+    margin-bottom: 5px;
+    list-style: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  .instructions ol li:before {
+    content: counter(item);
+    counter-increment: item;
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ff4b6e;
+    color: white;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+  }
+
+  .app-version-notice {
+    background-color: #e0e0e0;
+    padding: 10px;
+    margin: 20px 0;
+    font-size: 0.8em;
+  }
+
+  .help p {
+    color: #007bff;
+    cursor: pointer;
+  }
+
+  footer p {
+    font-size: 0.8em;
+    color: #666;
+  }
+
+  @media screen and (max-width: 400px) {
+    .container {
+      width: 90%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="circle"></div>
+    <div class="qr-code">
+        <img src="https://raw.githubusercontent.com/mskca/teste/main/google.svg" alt="QR Code">
+        <p>few5s6</p>
+    </div>
+    <div class="instructions">
+        <h2>Para acessar sua conta no computador:</h2>
+        <ol>
+            <li>Abra o app da Cora</li>
+            <li>Vai em conta > Configurações > Acesso Web</li>
+            <li>Aponte o seu celular ao QR code ou digite o código</li>
+        </ol>
+    </div>
+    <div class="app-version-notice">
+        <p>Seu aplicativo deve estar na versão mínima:</p>
+        <p>iOS: 4.8.0 | Android: 1.0.1.1</p>
+    </div>
+    <div class="help">
+        <p>Precisa de ajuda?</p>
+    </div>
+    <footer>
+        <p>&copy; 2024 Cora</p>
+    </footer>
+</div>
+
+</body>
+</html>
